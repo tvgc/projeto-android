@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+:root {
+    --color01: #F3FCD9;
+    --color02: #D8EB98;
+    --color03: #637A17;
+    --color04: #560B7A;
+    --color05: #993AC7;
+    --color06: black;
+    --color07: white;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+
+    --espacamento-padrao: 15px;
+    --espacamento-duplo: 30px;
+}
+
+body {
+    background-color: var(--color02);
+    font-family: var(--fonte-padrao);
+}
+
+/* ----------HEADER---------- */
+
+header {
+    background-image: linear-gradient(180deg, var(--color02), var(--color03));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
+}
+
+header > h1 {
+    color: var(--color04);
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    text-align: center;
+    padding: var(--espacamento-duplo) 0px var(--espacamento-padrao) 0px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.171);
+}
+
+header p {
+    color: var(--color05);
+    font-weight: 600;
+    text-align: center;
+    padding: var(--espacamento-padrao);
+    max-width: 500px;
+    margin: 0px auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.171);
+}
+
+
+
+header a {
+    text-decoration: none;
+    display: inline-block;
+    padding: var(--espacamento-padrao);
+    font-weight: 700;
+    color: var(--color04);
+    font-size: 0.9em;
+    transition-duration: 0.35s;
+    /* margin-right: -5px; */
+}
+
+header a:hover {
+    background-color: var(--color05);
+    color: var(--color02);
+    border-radius: 5px;
+}
+
+/* ----------MAIN---------- */
+
+main {
+    margin: 0px auto;
+    max-width: 840px;
+    background-color: var(--color01);
+    padding: var(--espacamento-duplo);
+    margin-bottom: var(--espacamento-duplo);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
+}
+
+main article h1 {
+    color: var(--color04);
+    font-size: 2em;
+    font-family: var(--fonte-android);
+    margin: var(--espacamento-duplo) 0px;
+}
+
+main p {
+    margin: var(--espacamento-duplo) 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+}
+
+main h2 {
+    color: var(--color04);
+    margin: var(--espacamento-duplo) 0px;
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(90deg, var(--color05), transparent);
+    padding-left: var(--espacamento-padrao);
+}
+
+main strong {
+    color: var(--color05);
+    font-weight: 600;
+}
+
+main a {
+    color: var(--color05);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a.externo::after {
+    content: '\1F517';
+}
+
+main img {
+    display: block;
+    margin: var(--espacamento-duplo) auto;
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+}
+
+main div.video {
+    background-color: var(--color05);
+    margin: var(--espacamento-duplo) -30px;
+    padding: var(--espacamento-duplo);
+    padding-bottom: 55%;
+    position: relative;
+}
+
+main div.video iframe {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/* ----------ASIDE---------- */
+
+main aside {
+    background-color: var(--color02);
+    margin: var(--espacamento-duplo) auto;
+    padding: 0px var(--espacamento-padrao) var(--espacamento-padrao) var(--espacamento-padrao);
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.466);
+}
+
+aside h3 {
+    color: var(--color02);
+    background-color: var(--color04);
+    margin: 0px -15px;
+    border-radius: 15px 15px 0px 0px;
+    padding: var(--espacamento-padrao);
+}
+
+aside ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+/* ----------FOOTER---------- */
+
+footer {
+    background-color: var(--color03);
+    text-align: center;
+    padding: var(--espacamento-padrao);
+}
+
+footer p {
+    color: var(--color04);
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color04);
+    font-weight: 600;
+}
